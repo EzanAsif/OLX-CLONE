@@ -1,0 +1,73 @@
+.FreshRecom_Section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+.heading{
+    font-size: 25px;
+    margin: 25px 0px;
+    color: #002f34;
+}
+
+.FreshRecom_cards {
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.IndivRecomCard {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  justify-content: flex-start;
+  border: 1.5px solid #ccd5d6;
+  border-radius: 5px;
+  margin: 10px 0px;
+}
+
+.IndivRecomCard .thumbnail {
+  width: 100%;
+  height: 250px;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.IndivRecomCard .thumbnail img {
+  height: 100%;
+  width: 75%;
+}
+
+.IndivRecomCard .title{
+    font-weight: 700;
+    margin: 5px 0px 10px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.IndivRecomCard .description{
+    margin: 5px 0px 10px 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.IndivRecomCard .price{
+    margin: 5px 0px 10px 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.IndivRecomCard .cardFooter{
+    margin: 5px 0px 10px 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.IndivRecomCard .cardFooter span{
+    float: right;
+    margin-right: 10px;
+}
