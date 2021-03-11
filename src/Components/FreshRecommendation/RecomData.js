@@ -22,6 +22,7 @@ export let recomData = {
         desc : "Lorem ipsum, dolor sit amet consectetur dolor sit...", 
         location : "Karachi, Sindh", 
         date : "11/03/2021",
+        category : "",
     },
     "Home Ups" : {
         thumb : "https://apollo-singapore.akamaized.net:443/v1/files/epc9wup1cjaa3-PK/image;s=272x0",
@@ -30,6 +31,7 @@ export let recomData = {
         desc : "Lorem ipsum, dolor sit amet consectetur dolor sit...", 
         location : "Karachi, Sindh", 
         date : "11/03/2021",
+        category : "",
     },
     "DELL IDEA PAD" : {
         thumb : "https://apollo-singapore.akamaized.net:443/v1/files/epc9wup1cjaa3-PK/image;s=272x0",
@@ -38,5 +40,6 @@ export let recomData = {
         desc : "Lorem ipsum, dolor sit amet consectetur dolor sit...", 
         location : "Karachi, Sindh", 
         date : "11/03/2021",
+        category : "",
     }
 };
