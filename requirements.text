@@ -4,9 +4,7 @@ UI:
 
 FUNCTIONALITIES:
 
-    - Redux se Data Globalization.
+    - Redux se Data Globalization.  (DONE)
     - Managing Routers.
     - Authentication.
     - Ad posting.
-
-    

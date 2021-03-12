@@ -2,10 +2,19 @@ import React from "react";
 import './styles.css'
 import IndvFreshRecom from "./IndvFreshRecom";
 import { recomData } from "./RecomData";
+import { useSelector , useDispatch } from 'react-redux'
 
 const FreshRecom = () => {
-  let Objkeys = Object.keys(recomData);
-  // console.log(Objkeys);
+    
+    const data = useSelector(state => state.recomData)
+    // console.log(Objkeys);
+    let Objkeys = Object.keys(data);
+
+    console.log(data);
+
+//   const dispatch = useDispatch()
+
+//   dispatch({type : 'default'})
 
   return (
     <div className="FreshRecom_Section">
