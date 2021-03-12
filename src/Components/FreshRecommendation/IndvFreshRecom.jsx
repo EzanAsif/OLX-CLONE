@@ -2,7 +2,7 @@ import React from 'react'
 
 const IndvFreshRecom = ({thumb, price,title, desc, location, date}) => {
     return (
-        <div className = "IndivRecomCard">
+        <>
             <div className="thumbnail">
                     <img src={thumb} alt=""/>
             </div>
@@ -16,7 +16,7 @@ const IndvFreshRecom = ({thumb, price,title, desc, location, date}) => {
             <div className="cardFooter">
                 {location} <span>{date}</span>
             </div>
-        </div>
+        </>
     )
 }
 

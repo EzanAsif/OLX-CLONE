@@ -170,20 +170,25 @@ color: #002f34;
 .popular-categories{
     width: 600px;
     margin-top: 0.35%;
+    text-decoration: none !important;
 }
 
 .popular-categories ul{
-display: flex;
-justify-content: space-around;
-align-items: center;
-list-style-type: none;
-/* width: 100%; */
-font-size: 15px;
-color: #002f34;
-text-decoration: underline !important;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+    /* width: 100%; */
+    font-size: 15px;
+    color: #002f34;
+    text-decoration: none;
+}
+
+.popular-categories ul a{
+    text-decoration: none;
 }
 
 .popular-categories ul li{
-color: #002f34;
-text-decoration: underline !important;
+    color: #002f34;
+    text-decoration: none;
 }

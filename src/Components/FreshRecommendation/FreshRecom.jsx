@@ -24,7 +24,7 @@ const FreshRecom = () => {
         <div className="FreshRecom_cards">
             {Objkeys.map((obj, index) => {
                 return (
-                <Link to={`/product/${obj}`} >
+                <Link className = "IndivRecomCard" to={`/product/${obj}`} >
                     <IndvFreshRecom
                         thumb={data[obj].thumb}
                         price={data[obj].price}

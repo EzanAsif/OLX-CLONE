@@ -27,6 +27,8 @@
   border: 1.5px solid #ccd5d6;
   border-radius: 5px;
   margin: 10px 0px;
+  text-decoration: none;
+  color: black;
 }
 
 .IndivRecomCard .thumbnail {
