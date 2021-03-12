@@ -1,8 +1,8 @@
 import React from "react";
 import './styles.css'
 import IndvFreshRecom from "./IndvFreshRecom";
-import { recomData } from "./RecomData";
 import { useSelector , useDispatch } from 'react-redux'
+import { Link } from "react-router-dom";
 
 const FreshRecom = () => {
     
@@ -24,14 +24,16 @@ const FreshRecom = () => {
         <div className="FreshRecom_cards">
             {Objkeys.map((obj, index) => {
                 return (
-                <IndvFreshRecom
-                    thumb={recomData[obj].thumb}
-                    price={recomData[obj].price}
-                    title={recomData[obj].title}
-                    desc={recomData[obj].desc}
-                    location={recomData[obj].location}
-                    date={recomData[obj].date}
-                />
+                <Link to={`/product/${obj}`} >
+                    <IndvFreshRecom
+                        thumb={data[obj].thumb}
+                        price={data[obj].price}
+                        title={data[obj].title}
+                        desc={data[obj].desc}
+                        location={data[obj].location}
+                        date={data[obj].date}
+                    />
+                </Link>
                 );
             })}
         </div>
