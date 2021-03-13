@@ -3,6 +3,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import Dropdown from 'react-bootstrap/Dropdown'
 import './styles.css';
 import SellButton from '../../assets/olxSellButton-01.png';
+import { Link } from "react-router-dom";
 
 const NavbarUpper = () => {
     return(
@@ -160,13 +161,13 @@ const NavbarBottom = () => {
             </Dropdown>
             <div className="popular-categories">
         <ul>
-            <a href="#home"><li>Mobile Phones</li></a>
-            <a href="#home"><li>Cars</li></a>
-            <a href="#home"><li>Motorcycles</li></a>
-            <a href="#home"><li>House</li></a>
-            <a href="#home"><li>TV-Video</li></a>
-            <a href="#home"><li>Tablets</li></a>
-            <a href="#home"><li>Land And Plots</li></a>
+            <Link to = {'/categories/Mobile_Phones'}><li>Mobile Phones</li></Link>
+            <Link to = {'/categories/'}><li>Cars</li></Link>
+            <Link to = {'/categories/'}><li>Motorcycles</li></Link>
+            <Link to = {'/categories/'}><li>House</li></Link>
+            <Link to = {'/categories/'}><li>TV-Video</li></Link>
+            <Link to = {'/categories/'}><li>Tablets</li></Link>
+            <Link to = {'/categories/'}><li>Land And Plots</li></Link>
         </ul>
         </div>
         </div>
