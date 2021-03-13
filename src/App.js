@@ -1,7 +1,7 @@
 import './App.css';
 import HomePage from './Pages/HomePage'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
-import IndAd from './Pages/indAd'
+import IndAd from './Pages/indAd';
 
 function App() {
   return (

@@ -12,7 +12,7 @@
 }
 
 .FreshRecom_cards {
-  width: 65%;
+  width: 70%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;

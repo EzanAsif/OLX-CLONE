@@ -8,7 +8,7 @@ const IndvFreshRecom = ({thumb, price,title, desc, location, date}) => {
             </div>
             <div className="title">{title}</div>
             <div className="description">
-                {desc}
+                {desc.slice(0,50)}...
             </div>
             <div className="price">
                 Rs {price} 
