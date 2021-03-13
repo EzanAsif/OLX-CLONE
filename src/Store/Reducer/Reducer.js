@@ -12,15 +12,15 @@ const INITIAL_STATE = {
         "LENOVO IDEA PAD" : {
             thumb : "https://apollo-singapore.akamaized.net:443/v1/files/epc9wup1cjaa3-PK/image;s=272x0",
             price : "50,000",
-            title : "Lenovo Surface Pro", 
+            title : "LENOVO IDEA PAD", 
             desc : "Lorem ipsum, dolor sit amet consectetur dolor sit...", 
             location : "Karachi, Sindh", 
             date : "11/03/2021",
         },
-        "PLOT IN 13/D" : {
+        "PLOT IN 13D" : {
             thumb : "https://apollo-singapore.akamaized.net:443/v1/files/epc9wup1cjaa3-PK/image;s=272x0",
             price : "50,000",
-            title : "Lenovo Surface Pro", 
+            title : "PLOT IN 13D", 
             desc : "Lorem ipsum, dolor sit amet consectetur dolor sit...", 
             location : "Karachi, Sindh", 
             date : "11/03/2021",
@@ -29,7 +29,7 @@ const INITIAL_STATE = {
         "Home Ups" : {
             thumb : "https://apollo-singapore.akamaized.net:443/v1/files/epc9wup1cjaa3-PK/image;s=272x0",
             price : "50,000",
-            title : "Lenovo Surface Pro", 
+            title : "Home Ups", 
             desc : "Lorem ipsum, dolor sit amet consectetur dolor sit...", 
             location : "Karachi, Sindh", 
             date : "11/03/2021",
@@ -38,7 +38,7 @@ const INITIAL_STATE = {
         "DELL IDEA PAD" : {
             thumb : "https://apollo-singapore.akamaized.net:443/v1/files/epc9wup1cjaa3-PK/image;s=272x0",
             price : "50,000",
-            title : "Lenovo Surface Pro", 
+            title : "DELL IDEA PAD", 
             desc : "Lorem ipsum, dolor sit amet consectetur dolor sit...", 
             location : "Karachi, Sindh", 
             date : "11/03/2021",

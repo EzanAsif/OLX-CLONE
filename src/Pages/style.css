@@ -39,21 +39,101 @@
 }
 
 .individual_ad .right{
-    width: 35%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
 .individual_ad .right .titleAmount{
-    padding: 20px 30px;
+    padding: 15px 30px;
+    border: 1.5px solid #ccd5d6;
+    border-radius: 5px;
 }
 
-.individual_ad .right .titleAmount .amount{
+.individual_ad .right .titleAmount .amount h1{
     margin-bottom: 0px !important;
 }
 
 .individual_ad .right .titleAmount .title h3{
     margin-top: 10px;
     font-weight: 300;
+}
+
+.individual_ad .right .titleAmount .location{
+    font-size: 14px;
+    color: #4d4d4d;
+}
+
+.individual_ad .right .titleAmount .location span{
+    float: right;
+}
+
+.individual_ad .right .sellerDetails{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px;
+    border: 1.5px solid #ccd5d6;
+    border-radius: 5px;
+    margin: 10px 0px;
+}
+
+.individual_ad .right .sellerDetails .heading{
+    margin-top: 0px;
+    font-weight: 400;
+    color: black;
+}
+
+.individual_ad .right .sellerDetails .detailsContainer{
+    display: flex;
+    align-items: center;
+}
+
+.individual_ad .right .sellerDetails .detailsContainer .profile{
+    width: 80px;
+    height: 80px;
+}
+
+.individual_ad .right .sellerDetails .detailsContainer .profile img{
+    width: 100%;
+    height: 100%;
+}
+
+.individual_ad .right .sellerDetails .detailsContainer .details{
+    margin-left: 15px;
+    font-weight: 500;
+    letter-spacing: -0.85px;
+    font-size: 25px;
+}
+
+.individual_ad .right .sellerDetails .button{
+    margin: 20px 0px;
+    width: 100%;
+    height: 45px;
+    background: #002f34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+}
+
+.individual_ad .right .sellerDetails .button:hover
+{
+    background-color: white;
+    border: 2px solid #002f34;
+    transition: 0.5s ease;
+}
+
+.individual_ad .right .sellerDetails .button:hover a{
+    color: #002f34;
+    transition: 0.5s ease;
+}
+
+.individual_ad .right .sellerDetails .button a{
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
 }

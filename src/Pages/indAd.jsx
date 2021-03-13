@@ -9,7 +9,9 @@ import './style.css'
 const IndAd = () => {
 
     let {id} = useParams()
+    console.log(id)
     const data = useSelector(state => state.recomData)
+    console.log(data)
     
     return (
         <>
@@ -40,6 +42,7 @@ const IndAd = () => {
                         </div>
                     </div>
                     <div className="sellerDetails">
+                        <div className="heading">Seller Details</div>
                         <div className="detailsContainer">
                             <div className="profile">
                                 <img src={Avatar} />
@@ -49,11 +52,11 @@ const IndAd = () => {
                                     User User
                                 </div>
                             </div>
-                            <div className="button">
+                        </div>
+                        <div className="button">
                                 <a href="#">
                                     Chat with seller
                                 </a>
-                            </div>
                         </div>
                     </div>
                 </div>
