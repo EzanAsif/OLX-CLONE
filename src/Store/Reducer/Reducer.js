@@ -94,6 +94,15 @@ const INITIAL_STATE = {
 
 function reducer( state = INITIAL_STATE , action ){
     switch (action.type) {
+        case "ADD_USER":
+            return{
+                ...state,
+                user : {
+                    name : action.payload.name,
+                    email : action.payload.email,
+                    photoUrl : action.payload.photoUrl,
+                },
+            };
         default:
             return state;
     } 
