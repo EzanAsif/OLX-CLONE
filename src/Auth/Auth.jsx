@@ -2,26 +2,28 @@ import {React, useState} from 'react'
 import firebase from "firebase";
 import { useSelector , useDispatch} from 'react-redux'
 
+var firebaseConfig = {
+    apiKey: "AIzaSyC6sNFttm5XFfR2IoK-SdLSF2W2IbGo72I",
+    authDomain: "olx-clone-ea.firebaseapp.com",
+    projectId: "olx-clone-ea",
+    storageBucket: "olx-clone-ea.appspot.com",
+    messagingSenderId: "987191221640",
+    appId: "1:987191221640:web:bcb578c22d4ed66031ae3d",
+};
+
+firebase.initializeApp(firebaseConfig);
 
 export const Auth = () => {
-    var firebaseConfig = {
-        apiKey: "AIzaSyC6sNFttm5XFfR2IoK-SdLSF2W2IbGo72I",
-        authDomain: "olx-clone-ea.firebaseapp.com",
-        projectId: "olx-clone-ea",
-        storageBucket: "olx-clone-ea.appspot.com",
-        messagingSenderId: "987191221640",
-        appId: "1:987191221640:web:bcb578c22d4ed66031ae3d",
-    };
     
-    // firebase.initializeApp(firebaseConfig);
-    const {name, email, photoURL} = useSelector(state => state.user);
+    let {name, email, photoUrl} = useSelector(state => state.user);
+    console.log("COMMING FROM REDUCER", name, email, photoUrl)
 
     const [Uname, setUname] = useState("a")
     const [Uemail, setUemail] = useState("a")
-    const [UphotoURL, setUphotoURL] = useState("a")
+    const [UphotoUrl, setUphotoUrl] = useState("a")
 
     const FacebookLogin = () => {
-          console.log(name, email, photoURL)
+          console.log(name, email, photoUrl)
         
           var provider = new firebase.auth.FacebookAuthProvider();
           firebase
@@ -33,13 +35,13 @@ export const Auth = () => {
         
                 // The signed-in user info.
                 var user = result.user;
-                console.log(user.displayName, user.email, user.photoURL);
+                console.log(user.displayName, user.email, user.photoUrl);
                 setUname(user.displayName)
                 setUemail(user.email)
-                setUphotoURL(user.displayName)
+                setUphotoUrl(user.displayName)
                 console.log("UNAME ======> " + Uname);
                 console.log("UEMAIL ======> " + Uemail);
-                console.log("UphotoURL ======> " + UphotoURL);
+                console.log("UphotoUrl ======> " + UphotoUrl);
         
                 // This gives you a Facebook Access Token. You can use it to access the Facebook API.
                 var accessToken = credential.accessToken;
@@ -73,12 +75,19 @@ export const Auth = () => {
                     console.log(user.displayName, user.email, user.photoURL);
                     setUname(user.displayName)
                     setUemail(user.email)
-                    setUphotoURL(user.photoURL)
+                    setUphotoUrl(user.photoURL)
+
+
                     name = Uname;
                     email = Uemail;
-                    photoURL = UphotoURL;
+                    photoUrl = UphotoUrl;
+                    console.log("IN GOOGLE LOGIN", Uname, Uemail, photoUrl);
 
-                    
+                    let U = {
+                        name : name,
+                        email : email,
+                        photoUrl : photoUrl
+                    }
             
                 }).catch((error) => {
                     // Handle Errors here.
@@ -90,12 +99,28 @@ export const Auth = () => {
                     var credential = error.credential;
                     // ...
                 });
-    }
-    
-    useDispatch({
-        type: "ADD_USER",
-        payload : {name, email, photoURL}
-    })
+
+                
+            }
+            
+
+            name = Uname;
+            email = Uemail;
+            photoUrl = UphotoUrl;
+            console.log("IN GOOGLE LOGIN", Uname, Uemail, photoUrl);
+
+            let user = {
+                name : name,
+                email : email,
+                photoUrl : photoUrl
+            }
+
+
+            useDispatch({
+                type: "ADD_USER",
+                payload : user
+            })
+
 
     return (
         <div>
@@ -106,7 +131,7 @@ export const Auth = () => {
             </h2>
             <h5>{name}</h5>
             <h5>{email}</h5>
-            <h5>{photoURL}</h5>
+            <h5>{photoUrl}</h5>
             
         </div>
     )

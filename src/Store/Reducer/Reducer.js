@@ -84,9 +84,9 @@ const INITIAL_STATE = {
         }
     },
     user : {
-        name : "",
-        email : "",
-        photoUrl : "",
+        name : ".",
+        email : ".",
+        photoUrl : ".",
     },
 } 
 
@@ -97,15 +97,18 @@ function reducer( state = INITIAL_STATE , action ){
         case "ADD_USER":
             return{
                 ...state,
-                user : {
-                    name : action.payload.name,
-                    email : action.payload.email,
-                    photoUrl : action.payload.photoUrl,
-                },
+                state : {...state.recomData, 
+                    user:action.payload},
             };
         default:
             return state;
     } 
 } 
 
+console.log("IN REDUCER");
+console.log("===========================================");
+console.log(INITIAL_STATE.user.email)
+console.log(INITIAL_STATE.user.name)
+console.log(INITIAL_STATE.user.photoUrl)
+console.log("===========================================");
 export default reducer;
