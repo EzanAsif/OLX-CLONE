@@ -19,7 +19,7 @@ const FilterSection = () => {
                     </li>
                     <li>
                         <div className="c3rwq"></div>
-                        <h4>Mobiles</h4>
+                        <h4>{id.replace('_', " ")}</h4>
                     </li>
                     <li className = "indented">
                         <ul>

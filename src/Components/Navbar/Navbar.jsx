@@ -162,12 +162,10 @@ const NavbarBottom = () => {
             <div className="popular-categories">
         <ul>
             <Link to = {'/categories/Mobile_Phones'}><li>Mobile Phones</li></Link>
-            <Link to = {'/categories/'}><li>Cars</li></Link>
-            <Link to = {'/categories/'}><li>Motorcycles</li></Link>
-            <Link to = {'/categories/'}><li>House</li></Link>
-            <Link to = {'/categories/'}><li>TV-Video</li></Link>
-            <Link to = {'/categories/'}><li>Tablets</li></Link>
-            <Link to = {'/categories/'}><li>Land And Plots</li></Link>
+            <Link to = {'/categories/Laptops'}><li>Laptops</li></Link>
+            <Link to = {'/categories/Motorcycles'}><li>Motorcycles</li></Link>
+            <Link to = {'/categories/TV'}><li>TVs</li></Link>
+            <Link to = {'/categories/Land_And_Plots'}><li>Land And Plots</li></Link>
         </ul>
         </div>
         </div>

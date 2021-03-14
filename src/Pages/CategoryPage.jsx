@@ -4,6 +4,7 @@ import { useSelector , useDispatch } from 'react-redux'
 import { useParams } from "react-router-dom";
 import {IndCategoryCards, FilterSection} from './IndCategoryPage'
 import NavbarM from '../Components/Navbar/Navbar';
+import Footer from '../Components/Footer/Footer'
 
 
 const CategoryPage = () => {
@@ -34,6 +35,7 @@ const CategoryPage = () => {
                     }
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
