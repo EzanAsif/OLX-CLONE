@@ -151,4 +151,129 @@
 
 /* CATEGORY PAGE */
 
+.wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 
+.wrapper .FilterSection{
+    width: 20%;
+    /* border: 1.5px solid #ccd5d6;
+    border-radius: 5px; */
+}
+
+.wrapper .FilterSection .categories{
+    width: 100%;
+    height: 100%;
+    border: 1.5px solid #ccd5d6;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .FilterSection .categories h2{
+    margin-bottom: 0px;
+}
+
+.wrapper .FilterSection .categories ul{
+    padding: 0;
+    list-style-type: none;
+    margin-top: 0;
+}
+
+.wrapper .FilterSection .categories ul li{
+    color: #002f34;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .FilterSection .categories ul li .c3rwq{
+    width: 15px;
+    height: 2.5px;
+    background-color: #002f34;
+    margin-top: 12px;
+}
+
+.wrapper .FilterSection .categories ul li h4{
+    margin: 20px 0px 10px 5px;
+}
+
+.wrapper .FilterSection .categories ul li ul{
+    margin-left: 10px;
+}
+
+.wrapper .categoryCards{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-top: 2px solid #ccd5d6;
+    margin-top: 75px;
+    padding: 20px 10px;
+}
+
+
+/* INDIVIDUAL CARD */
+
+
+.IndivRecomCard {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: flex-start;
+    border: 1.5px solid #ccd5d6;
+    border-radius: 5px;
+    margin: 10px 0px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .IndivRecomCard .thumbnail {
+    width: 100%;
+    height: 300px;
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .IndivRecomCard .thumbnail img {
+    height: 100%;
+    width: 75%;
+  }
+  
+  .IndivRecomCard .title{
+      font-weight: 700;
+      margin: 5px 0px 10px 10px;
+      text-align: center;
+      font-size: 18px;
+  }
+  
+  .IndivRecomCard .description{
+      margin: 5px 0px 10px 10px;
+      font-size: 15px;
+      font-weight: 300;
+  }
+  
+  .IndivRecomCard .price{
+      margin: 5px 0px 10px 10px;
+      font-size: 17px;
+      font-weight: 500;
+  }
+
+  .IndivRecomCard .price h3{
+      margin: 0 !important;
+  }
+  
+  .IndivRecomCard .cardFooter{
+      margin: 5px 0px 10px 10px;
+      font-size: 13.5px;
+      font-weight: 300;
+  }
+  
+  .IndivRecomCard .cardFooter span{
+      float: right;
+      margin-right: 10px;
+  }

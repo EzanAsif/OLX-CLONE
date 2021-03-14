@@ -1,8 +1,15 @@
 import React from 'react'
+import IndvFreshRecom from '../Components/FreshRecommendation/IndvFreshRecom'
+import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const FilterSection = () => {
+
+    let {id} = useParams()
+
     return(
         <div className="FilterSection">
+            <h2>{id.replace('_', " ")}</h2>
             <div className="categories">
                 <h2>categories</h2>
                 <ul>
@@ -32,23 +39,26 @@ const FilterSection = () => {
 
 const IndCategoryCards = ({thumb, price,title, desc, location, date}) => {
     return (
-        <>
-            <div className="Category">
-                <strong>{title}</strong>
-                <br/>
-                {thumb}
-                <br/>
-                {price}
-                <br/>
-                {desc}
-                <br/>
-                {location}
-                 <br/>
-                {date}
-                <br/>
-                <br/>
-            </div>         
-        </>
+            <Link to={`/product/${title}`} className="IndivRecomCard">
+                <div className="thumbnail">
+                    <img src={thumb} alt={title} />
+                </div>
+                <div className="title">
+                    {title}
+                </div>
+                <div className="description">
+                    {desc.slice(0,100)}..
+                </div>
+                <div className="price">
+                    <h3>Rs {price}</h3>
+                </div>
+                <div className="cardFooter">
+                    {location}
+                    <span>
+                        {date}
+                    </span>
+                </div>
+            </Link>         
     )
 }
 
