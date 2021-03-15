@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Auth />
         <Route exact path='/' component = {HomePage} />
         <Route path="/product/:id" component = {IndAd} />
         <Route path="/categories/:id" component = {CategoryPage} />

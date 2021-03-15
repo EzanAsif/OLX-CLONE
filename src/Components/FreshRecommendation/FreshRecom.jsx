@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 const FreshRecom = () => {
     
-    const data = useSelector(state => state.recomData)
-    // console.log(Objkeys);
+    const data = useSelector(state => state.adData.recomData)
+    console.log("DATA===>" + data);
     let Objkeys = Object.keys(data);
 
     console.log(data);

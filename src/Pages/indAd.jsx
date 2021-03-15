@@ -10,7 +10,7 @@ const IndAd = () => {
 
     let {id} = useParams()
     console.log(id)
-    const data = useSelector(state => state.recomData)
+    const data = useSelector(state => state.adData.recomData)
     console.log(data)
     
     return (

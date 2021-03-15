@@ -1,5 +1,5 @@
 
-const INITIAL_STATE = {
+const INITIAL_STATE_ADS = {
     recomData : {
         "Microsoft Surface Pro" : {
             thumb : "https://apollo-singapore.akamaized.net:443/v1/files/epc9wup1cjaa3-PK/image;s=272x0",
@@ -83,32 +83,42 @@ const INITIAL_STATE = {
             category : "TV",
         }
     },
-    user : {
-        name : ".",
-        email : ".",
-        photoUrl : ".",
-    },
 } 
 
+const INITIAL_STATE_USER = {
+    Ustate:{}
+}
 
 
-function reducer( state = INITIAL_STATE , action ){
+function AdReducer( Adstate = INITIAL_STATE_ADS , action ){
     switch (action.type) {
-        case "ADD_USER":
-            return{
-                ...state,
-                state : {...state.recomData, 
-                    user:action.payload},
-            };
         default:
-            return state;
+            return Adstate;
     } 
 } 
 
+function UserReducer(Ustate = INITIAL_STATE_USER, action){
+    switch (action.type) {
+        case "ADD_USER":
+            return{
+                ...Ustate,
+                Ustate : action.payload,
+            };
+        default:
+            return Ustate;
+    } 
+}
+
+export  {AdReducer, UserReducer};
+
+
+
+
+
 console.log("IN REDUCER");
 console.log("===========================================");
-console.log(INITIAL_STATE.user.email)
-console.log(INITIAL_STATE.user.name)
-console.log(INITIAL_STATE.user.photoUrl)
+console.log(INITIAL_STATE_USER.Ustate);
+console.log(INITIAL_STATE_USER.Ustate.email)
+console.log(INITIAL_STATE_USER.Ustate.name)
+console.log(INITIAL_STATE_USER.Ustate.photoUrl)
 console.log("===========================================");
-export default reducer;
