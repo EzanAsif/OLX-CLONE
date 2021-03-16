@@ -5,6 +5,8 @@ import './styles.css';
 import SellButton from '../../assets/olxSellButton-01.png';
 import { Link } from "react-router-dom";
 
+import LoginButton from '../LoginPopup/LoginPopup'
+
 const NavbarUpper = () => {
     return(
         <div className="navbar_upper">
@@ -29,7 +31,7 @@ const NavbarUpper = () => {
                 <SearchIcon />
             </div>
             <div className="buttons">
-                <a class = "login_button"href="#">Login</a>
+                <LoginButton />
                 <a class = "sell_button" href="#"><img src={SellButton} alt=""/></a>
             </div>
         </div>
