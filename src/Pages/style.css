@@ -278,3 +278,55 @@
       float: right;
       margin-right: 10px;
   }
+
+
+  /* AD POSTING */
+
+  .adForm{
+    width: 60%;
+    margin: 100px auto;
+    border: 1.5px solid lightgray;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .adForm h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  .adForm form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 40px 0px 0px 0px;
+    align-items: center;
+  }
+
+  .adForm form label,
+  .adForm form input{
+      margin: 5px 0px;
+      width: 100%;
+  }
+
+  .adForm form input:focus{
+      outline: none;
+      box-shadow: none;
+  }
+
+  .adForm form button{
+      width: 200px;
+      height: 40px;
+      margin: 20px 0px;
+      color: white;
+      background-color: #002f34;
+      border: none;
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 600;
+  }

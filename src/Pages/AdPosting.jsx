@@ -1,7 +1,7 @@
 import {React, useState} from 'react'
 import { useSelector , useDispatch} from 'react-redux'
-import FreshRecom from '../Components/FreshRecommendation/FreshRecom'
-
+import NavbarM from '../Components/Navbar/Navbar'
+import Footer from '../Components/Footer/Footer'
 
 
 const AdPosting = () => {
@@ -45,39 +45,44 @@ const AdPosting = () => {
 
         addAd(newAd)
 
+        return(
+            alert("AD POSTED SUCCESSFULLY")
+        )
+
     }
 
     return (
         <>
-            <div>
-                <h3>Ad A new Ad</h3>
+            <NavbarM />
+            <div className = "adForm">
+                <h3>Post A new Ad</h3>
                 <form onSubmit ={(e) => onSubmit(e)}>
                     <label htmlFor="title">Title</label>
-                    <input onChange = {(e) => setTitle(e.target.value)} value = {title} type="text" id = "title" placeholder="Enter Title of your Ad"/>
+                    <input required onChange = {(e) => setTitle(e.target.value)} value = {title} type="text" id = "title" placeholder="Enter Title of your Ad"/>
 
-                    <label htmlFor="thumb">thumb</label>
-                    <input onChange = {(e) => setThumb(e.target.value)} value = {thumb} type="text" id = "thumb" placeholder="Enter Title of your Ad"/>
+                    <label htmlFor="thumb">Thumbnail</label>
+                    <input required onChange = {(e) => setThumb(e.target.value)} value = {thumb} type="text" id = "thumb" placeholder="Enter url of thumbnail of your Ad"/>
 
-                    <label htmlFor="price">price</label>
-                    <input onChange = {(e) => setPrice(e.target.value)} value = {price} type="text" id = "price" placeholder="Enter Title of your Ad"/>
+                    <label htmlFor="price">Price</label>
+                    <input required onChange = {(e) => setPrice(e.target.value)} value = {price} type="text" id = "price" placeholder="Enter Price of your product"/>
 
-                    <label htmlFor="desc">desc</label>
-                    <input onChange = {(e) => setDesc(e.target.value)} value = {desc} type="text" id = "desc" placeholder="Enter Title of your Ad"/>
+                    <label htmlFor="desc">Description</label>
+                    <input required onChange = {(e) => setDesc(e.target.value)} value = {desc} type="text" id = "desc" placeholder="Enter description of your Ad"/>
 
-                    <label htmlFor="location">location</label>
-                    <input onChange = {(e) => setLocation(e.target.value)} value = {location} type="text" id = "location" placeholder="Enter Title of your Ad"/>
+                    <label htmlFor="location">Location</label>
+                    <input required onChange = {(e) => setLocation(e.target.value)} value = {location} type="text" id = "location" placeholder="Enter location of your product"/>
 
-                    <label htmlFor="date">date</label>
-                    <input onChange = {(e) => setDate(e.target.value)} value = {date} type="text" id = "date" placeholder="Enter Title of your Ad"/>
+                    <label htmlFor="date">Date</label>
+                    <input required onChange = {(e) => setDate(e.target.value)} value = {date} type="text" id = "date" placeholder="Enter Date"/>
 
-                    <label htmlFor="category">category</label>
-                    <input onChange = {(e) => setCategory(e.target.value)} value = {category} type="text" id = "category" placeholder="Enter Title of your Ad"/>
+                    <label htmlFor="category">Category</label>
+                    <input required onChange = {(e) => setCategory(e.target.value)} value = {category} type="text" id = "category" placeholder="Enter Category of your Ad"/>
                     <button>
                         POST!
                     </button>
                 </form>
             </div>
-            <FreshRecom/>
+            <Footer/>
         </>
     )
 }
