@@ -13,7 +13,7 @@ const FreshRecom = () => {
         // );
         
     let  Objkeys = Object.keys(data)
-    // console.log(Objkeys);
+    console.log(Objkeys[0]);
 
 //   const dispatch = useDispatch()
 

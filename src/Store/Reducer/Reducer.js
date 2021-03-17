@@ -94,8 +94,11 @@ function AdReducer( Adstate = recomData , action ){
     switch (action.type) {
         case "ADD_AD":
             return{
-                Adstate : {[action.payload.title.toString()] : action.payload , ...Adstate},
+                ...Adstate,
+                [action.payload.title] : action.payload,
+                
             };
+            // console.log(Adstate["New ADD"])
             // console.log(Adstate);
         default:
             return Adstate;
