@@ -6,11 +6,14 @@ import { Link } from "react-router-dom";
 
 const FreshRecom = () => {
     
-    const data = useSelector(state => state.adData.recomData)
-    console.log("DATA===>" + data);
-    let Objkeys = Object.keys(data);
-
-    console.log(data);
+    const data = useSelector(state => state.adData)
+    // console.log("DATA===>" + data);
+    // let Objkeys;
+    // data.map(
+        // );
+        
+    let  Objkeys = Object.keys(data)
+    // console.log(Objkeys);
 
 //   const dispatch = useDispatch()
 
@@ -24,7 +27,11 @@ const FreshRecom = () => {
         <div className="FreshRecom_cards">
             {Objkeys.map((obj, index) => {
                 return (
-                <Link className = "IndivRecomCard" to={`/product/${obj}`} >
+                    <Link className = "IndivRecomCard" to={`/product/${obj}`} >
+                    {console.log("FROM FRESH RECOMMENDATION ")}
+                    {console.log(data[obj].title)}
+                    {console.log(data[obj])}
+                    
                     <IndvFreshRecom
                         thumb={data[obj].thumb}
                         price={data[obj].price}

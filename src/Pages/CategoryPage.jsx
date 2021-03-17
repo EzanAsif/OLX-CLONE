@@ -12,8 +12,7 @@ const CategoryPage = () => {
     let {id} = useParams()
     console.log(id)
 
-    const data = useSelector(state => state.adData.recomData)
-    console.log(data);
+    const data = useSelector(state => state.adData)
 
     const keys = Object.keys(data)  
 

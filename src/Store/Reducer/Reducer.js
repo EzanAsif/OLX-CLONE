@@ -1,6 +1,6 @@
 
-const INITIAL_STATE_ADS = {
-    recomData : {
+
+const recomData = {
         "Microsoft Surface Pro" : {
             thumb : "https://apollo-singapore.akamaized.net:443/v1/files/epc9wup1cjaa3-PK/image;s=272x0",
             price : "50,000",
@@ -82,16 +82,21 @@ const INITIAL_STATE_ADS = {
             date : "11/03/2021",
             category : "TV",
         }
-    },
-} 
+}
+
 
 const INITIAL_STATE_USER = {
     Ustate:{}
 }
 
 
-function AdReducer( Adstate = INITIAL_STATE_ADS , action ){
+function AdReducer( Adstate = recomData , action ){
     switch (action.type) {
+        case "ADD_AD":
+            return{
+                Adstate : {[action.payload.title.toString()] : action.payload , ...Adstate},
+            };
+            // console.log(Adstate);
         default:
             return Adstate;
     } 
@@ -115,10 +120,10 @@ export  {AdReducer, UserReducer};
 
 
 
-console.log("IN REDUCER");
-console.log("===========================================");
-console.log(INITIAL_STATE_USER.Ustate);
-console.log(INITIAL_STATE_USER.Ustate.email)
-console.log(INITIAL_STATE_USER.Ustate.name)
-console.log(INITIAL_STATE_USER.Ustate.photoUrl)
-console.log("===========================================");
+// console.log("IN REDUCER");
+// console.log("===========================================");
+// console.log(INITIAL_STATE_USER.Ustate);
+// console.log(INITIAL_STATE_USER.Ustate.email)
+// console.log(INITIAL_STATE_USER.Ustate.name)
+// console.log(INITIAL_STATE_USER.Ustate.photoUrl)
+// console.log("===========================================");

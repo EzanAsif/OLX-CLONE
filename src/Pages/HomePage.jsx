@@ -6,6 +6,7 @@ import BottomBanner from '../Components/BottomBanner/BottomBanner'
 import Footer from '../Components/Footer/Footer'
 import './style.css';
 import BackToTop from 'react-easy-back-to-top';
+import {Link} from 'react-router-dom'
 
 const HomePage = () => {
     return (
@@ -26,6 +27,7 @@ const HomePage = () => {
             />
             <NavbarM/>
             <HomePageBanner />
+            <a href="/createAd">POST AN AD</a>
             <FreshRecom />
             <div className="lastSection">
                 <BottomBanner /> 
