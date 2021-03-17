@@ -3,12 +3,14 @@ UI:
     - Footer -------------------------- (DONE)
     - Individual Page ------------------ (DONE)
     - Separate Category Pages ---------- (DONE)
+    - login popup modal
 
 FUNCTIONALITIES:
 
     - Redux se Data Globalization ------- (DONE)
     - Managing Routers ------------------ (DONE)
-    - Authentication -------------------- (HALF WAY THERE :) )
-    - Ad posting.
+    - Authentication -------------------- ( DONE )
+    - Ad posting. ----------------------- ( DONE )
+    - Connect Firebase DB
 
 https://tpc.googlesyndication.com/simgad/16935534269675051134?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qmX5GxVysw6wB5gfpRbIQc7VCJ-uA
