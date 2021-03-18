@@ -9,7 +9,7 @@ import './style.css'
 const IndAd = () => {
 
     let {id} = useParams()
-    console.log(id)
+    // console.log(id)
     const data = useSelector(state => state.adData)
     // console.log(data)
     

@@ -10,7 +10,7 @@ import Footer from '../Components/Footer/Footer'
 const CategoryPage = () => {
 
     let {id} = useParams()
-    console.log(id)
+    // console.log(id)
 
     const data = useSelector(state => state.adData)
 

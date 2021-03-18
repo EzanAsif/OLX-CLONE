@@ -111,6 +111,7 @@
     width: 50px;
     height: 50px;
     margin: 0px 10px 0px 0px;
+    border-radius: 50%;
 }
 
 .navbar_upper .authenticated .user h4{

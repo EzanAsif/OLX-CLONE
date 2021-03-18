@@ -2,6 +2,7 @@ import {React, useState} from 'react'
 import { useSelector , useDispatch} from 'react-redux'
 import NavbarM from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
+import { useHistory } from "react-router-dom";
 
 
 const AdPosting = () => {
@@ -27,6 +28,8 @@ const AdPosting = () => {
         })
     }
 
+    let history = useHistory();
+
     const onSubmit = (e) => {
 
         e.preventDefault();
@@ -45,9 +48,10 @@ const AdPosting = () => {
 
         addAd(newAd)
 
-        return(
-            alert("AD POSTED SUCCESSFULLY")
-        )
+        alert("AD POSTED SUCCESSFULLY")
+
+
+        history.push('/')
 
     }
 
@@ -57,8 +61,8 @@ const AdPosting = () => {
             <div className = "adForm">
                 <h3>Post A new Ad</h3>
                 <form onSubmit ={(e) => onSubmit(e)}>
+                    <input requiredashboardd onChange = {(e) => setTitle(e.target.value)} value = {title} type="text" id = "title" placeholder="Enter Title of your Ad"/>
                     <label htmlFor="title">Title</label>
-                    <input required onChange = {(e) => setTitle(e.target.value)} value = {title} type="text" id = "title" placeholder="Enter Title of your Ad"/>
 
                     <label htmlFor="thumb">Thumbnail</label>
                     <input required onChange = {(e) => setThumb(e.target.value)} value = {thumb} type="text" id = "thumb" placeholder="Enter url of thumbnail of your Ad"/>

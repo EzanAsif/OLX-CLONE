@@ -24,7 +24,7 @@ const MyVerticallyCenteredModal =( props)  =>{
 
 
   let Comminguser = useSelector(state => state.userData);
-  console.log("COMMING FROM REDUCER =>", Comminguser)
+  // console.log("COMMING FROM REDUCER =>", Comminguser)
 
   const dispatch = useDispatch();
 
