@@ -18,7 +18,7 @@ const AdPosting = () => {
     const dispatch = useDispatch();
 
     let PreviousAdData = useSelector(state => state.adData);
-    console.log(PreviousAdData);
+    // console.log(PreviousAdData);
 
     const addAd = (Ad) => {
         dispatch({

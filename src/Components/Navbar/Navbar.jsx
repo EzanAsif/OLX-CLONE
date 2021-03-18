@@ -4,10 +4,68 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import './styles.css';
 import SellButton from '../../assets/olxSellButton-01.png';
 import { Link } from "react-router-dom";
-
+import {Auth} from '../../Auth/Auth'
+import firebase from "firebase";
+import { useSelector , useDispatch} from 'react-redux'
 import LoginButton from '../LoginPopup/LoginPopup'
+import AdPosting from '../../Pages/AdPosting'
+// import SellButton from '../sellButton/SellButton'
+
+var firebaseConfig = {
+    apiKey: "AIzaSyC6sNFttm5XFfR2IoK-SdLSF2W2IbGo72I",
+    authDomain: "olx-clone-ea.firebaseapp.com",
+    projectId: "olx-clone-ea",
+    storageBucket: "olx-clone-ea.appspot.com",
+    messagingSenderId: "987191221640",
+    appId: "1:987191221640:web:bcb578c22d4ed66031ae3d",
+};
+
+// firebase.initializeApp(firebaseConfig);
 
 const NavbarUpper = () => {
+
+    let Comminguser = useSelector(state => state.userData);
+    console.log("COMMING FROM REDUCER =>", Comminguser)
+  
+    const dispatch = useDispatch();
+  
+    const GoogleLogin = () => {
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth()
+              .signInWithPopup(provider)
+              .then((result) => {
+                  /** @type {firebase.auth.OAuthCredential} */
+                  var credential = result.credential;
+                  var token = credential.accessToken;
+                  var user = result.user;
+                  console.log(user.displayName, user.email, user.photoURL);
+  
+                  let userDetails = {
+                      name : user.displayName,
+                      email : user.email,
+                      photoUrl : user.photoURL
+                  }
+  
+                  console.log("USER DETAILS", userDetails);
+                  
+                  dispatch({type: "ADD_USER", payload:userDetails})
+  
+          
+              }).catch((error) => {
+                  // Handle Errors here.
+                  var errorCode = error.code;
+                  var errorMessage = error.message;
+                  // The email of the user's account used.
+                  var email = error.email;
+                  // The firebase.auth.AuthCredential type that was used.
+                  var credential = error.credential;
+                  // ...
+              });
+  
+              
+          }
+         
+
     return(
         <div className="navbar_upper">
             <div className="logo">
@@ -30,10 +88,26 @@ const NavbarUpper = () => {
                 <input type="text" placeholder = "Find cars, mobiles and more ...."/>
                 <SearchIcon />
             </div>
-            <div className="buttons">
-                <LoginButton />
-                <a class = "sell_button" href="#"><img src={SellButton} alt=""/></a>
-            </div>
+            
+            {
+                Comminguser.Ustate.name 
+                ? 
+                    <div className="authenticated">
+                        <div className="user">
+                            <img src={Comminguser.Ustate.photoUrl} alt=""/>
+                            <h4>{Comminguser.Ustate.name}</h4>
+                        </div>
+                        <div className="sellPage">
+                            <Link to = {"/createAd"}>
+                                <img src= {SellButton}alt="SellButton"/>
+                            </Link>
+                        </div>
+                    </div>
+                :
+                <div className="buttons_notAuthenticated">
+                    <LoginButton />
+                </div>
+            }
         </div>
     )
 }

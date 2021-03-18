@@ -13,7 +13,7 @@ const FreshRecom = () => {
         // );
         
     let  Objkeys = Object.keys(data)
-    console.log(Objkeys[0]);
+    // console.log(Objkeys[0]);
 
 //   const dispatch = useDispatch()
 
@@ -28,9 +28,9 @@ const FreshRecom = () => {
             {Objkeys.map((obj, index) => {
                 return (
                     <Link className = "IndivRecomCard" to={`/product/${obj}`} >
-                    {console.log("FROM FRESH RECOMMENDATION ")}
+                    {/* {console.log("FROM FRESH RECOMMENDATION ")}
                     {console.log(data[obj].title)}
-                    {console.log(data[obj])}
+                    {console.log(data[obj])} */}
                     
                     <IndvFreshRecom
                         thumb={data[obj].thumb}

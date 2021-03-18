@@ -27,7 +27,6 @@ const HomePage = () => {
             />
             <NavbarM/>
             <HomePageBanner />
-            <a href="/createAd">POST AN AD</a>
             <FreshRecom />
             <div className="lastSection">
                 <BottomBanner /> 
