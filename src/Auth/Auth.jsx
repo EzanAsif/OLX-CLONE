@@ -6,12 +6,12 @@ import { useSelector , useDispatch} from 'react-redux'
 var firebaseConfig = {
     apiKey: "AIzaSyC6sNFttm5XFfR2IoK-SdLSF2W2IbGo72I",
     authDomain: "olx-clone-ea.firebaseapp.com",
+    databaseURL: "https://olx-clone-ea-default-rtdb.firebaseio.com",
     projectId: "olx-clone-ea",
     storageBucket: "olx-clone-ea.appspot.com",
     messagingSenderId: "987191221640",
-    appId: "1:987191221640:web:bcb578c22d4ed66031ae3d",
-};
-
+    appId: "1:987191221640:web:876953759fc99b5b31ae3d"
+}
 firebase.initializeApp(firebaseConfig);
 
 export const Auth = () => {

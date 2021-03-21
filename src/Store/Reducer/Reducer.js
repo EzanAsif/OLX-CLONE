@@ -1,4 +1,4 @@
-
+import firebase from 'firebase'
 
 const recomData = {
         "Microsoft Surface Pro" : {
@@ -55,39 +55,66 @@ const recomData = {
             date : "11/03/2021",
             category : "House",
         },
-        "DELL IDEA PAD" : {
-            thumb : "https://apollo-singapore.akamaized.net:443/v1/files/epc9wup1cjaa3-PK/image;s=272x0",
-            price : "50,000",
-            title : "DELL IDEA PAD", 
-            desc : "Lorem ipsum, dolor sit amet consectetur dolor Lorem ipsum, dolor sit amet consectetur dolor Lorem ipsum, dolor sit amet consectetur dolor Lorem ipsum, dolor sit amet consectetur dolor ", 
-            location : "Karachi, Sindh", 
-            date : "11/03/2021",
-            category : "Laptop",
-        },
-        "REDMI 9C" : {
-            thumb : "https://apollo-singapore.akamaized.net/v1/files/877vefh69y2v-PK/image;s=300x600;q=60",
-            price : "65,000",
-            title : "REDMI 9C", 
-            desc : "Lorem ipsum, dolor sit amet consectetur dolor Lorem ipsum, dolor sit amet consectetur dolor Lorem ipsum, dolor sit amet consectetur dolor Lorem ipsum, dolor sit amet consectetur dolor ", 
-            location : "Karachi, Sindh", 
-            date : "11/03/2021",
-            category : "Mobile_Phones",
-        },
-        "77GX LG OLED TV" : {
-            thumb : "https://apollo-singapore.akamaized.net/v1/files/kjhqmlomar7r-PK/image;s=300x600;q=60",
-            price : "65,000",
-            title : "77GX LG OLED TV", 
-            desc : "Lorem ipsum, dolor sit amet consectetur dolor Lorem ipsum, dolor sit amet consectetur dolor Lorem ipsum, dolor sit amet consectetur dolor Lorem ipsum, dolor sit amet consectetur dolor ", 
-            location : "Karachi, Sindh", 
-            date : "11/03/2021",
-            category : "TV",
-        }
 }
 
+var firebaseConfig = {
+    apiKey: "AIzaSyC6sNFttm5XFfR2IoK-SdLSF2W2IbGo72I",
+    authDomain: "olx-clone-ea.firebaseapp.com",
+    databaseUrl : "https://olx-clone-ea-default-rtdb.firebaseio.com/",
+    projectId: "olx-clone-ea",
+    storageBucket: "olx-clone-ea.appspot.com",
+    messagingSenderId: "987191221640",
+    appId: "1:987191221640:web:bcb578c22d4ed66031ae3d",
+};
+
+
+// firebase.initializeApp(firebaseConfig);
+
+
+let database = firebase.database();
 
 const INITIAL_STATE_USER = {
     Ustate:{}
 }
+
+let dbData;
+
+
+database.ref().set({ads:recomData})
+
+let commingData;
+database.ref().child('/ads').get().then(function(ad) {
+    
+    if (ad.exists()) {
+      commingData = ad.val()
+      console.log("COMMING DATA : ");
+      console.log(commingData.ads);
+  
+      let new_data = {
+        ads : commingData
+      }
+      
+      console.log("NEW DATA : ");
+      console.log(new_data.ads);
+      
+      commingData = new_data.ads
+    }
+    else {
+      console.log("No data available");
+    }
+})
+
+    
+
+// if (commingData){
+
+//     dbData = commingData
+    
+// }
+
+// else {
+//     dbData = recomData;
+// }
 
 
 function AdReducer( Adstate = recomData , action ){
@@ -96,10 +123,10 @@ function AdReducer( Adstate = recomData , action ){
             return{
                 ...Adstate,
                 [action.payload.title] : action.payload,
+                // [database.ref('/ads').push({[action.payload.title] : action.payload})]
                 
             };
-            // console.log(Adstate["New ADD"])
-            // console.log(Adstate);
+
         default:
             return Adstate;
     } 

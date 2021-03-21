@@ -3,7 +3,7 @@ import { useSelector , useDispatch} from 'react-redux'
 import NavbarM from '../Components/Navbar/Navbar'
 import Footer from '../Components/Footer/Footer'
 import { useHistory } from "react-router-dom";
-
+import firebase from 'firebase'
 
 const AdPosting = () => {
 
@@ -19,7 +19,8 @@ const AdPosting = () => {
     const dispatch = useDispatch();
 
     let PreviousAdData = useSelector(state => state.adData);
-    // console.log(PreviousAdData);
+    console.log("PREVIOUS DATA");
+    console.log(PreviousAdData);
 
     const addAd = (Ad) => {
         dispatch({
@@ -47,6 +48,22 @@ const AdPosting = () => {
         console.log(newAd);
 
         addAd(newAd)
+
+        
+        let database = firebase.database();
+
+
+        database.ref('/ads/').child(newAd.title).set({
+            title : newAd.title,
+            thumb : newAd.thumb,
+            price : newAd.price,
+            desc : newAd.desc,
+            location : newAd.location,
+            date : newAd.date,
+            category : newAd.category,
+        })
+
+
 
         alert("AD POSTED SUCCESSFULLY")
 
