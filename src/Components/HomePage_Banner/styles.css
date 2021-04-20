@@ -1,6 +1,12 @@
-.HomePageBanner{
+.HomePageBanner {
     width: 100%;
     height: 250px;
     background: url("https://statics.olx.com.pk/external/base/img/hero_bg_pk.jpg") center no-repeat;
-    background-size: cover;
+    /* background-size: cover; */
+}
+
+@media(max-width: 900px) {
+    .HomePageBanner {
+        background-position: 38%;
+    }
 }

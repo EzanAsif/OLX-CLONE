@@ -1,38 +1,39 @@
-.navbar_upper{
+.navbar_upper {
     position: fixed;
     top: 0;
     z-index: 1000;
     width: 100%;
     display: flex;
-    justify-content: center;
-    padding: 10px 0px;
+    justify-content: space-evenly;
     align-items: center;
+    padding: 10px 0px;
     background-color: #fafafa;
     border: 2px solid #f1f1f1;
+    opacity: 0.9;
     /* border-bottom: red; */
 }
 
-.navbar_upper .logo{
+.navbar_upper .logo {
     width: 48px;
     height: 48px;
     margin: 0px 15px 0px 0px;
 }
 
-.navbar_upper .city_picker{
+.navbar_upper .city_picker {
     height: 45px;
     display: flex;
     border: 2.5px solid #002f34;
     border-radius: 5px;
     /* margin: 5px 20px 5px 50px; */
-}   
+}
 
-.navbar_upper .city_picker .form{
+.navbar_upper .city_picker .form {
     width: 200px;
     height: 45px;
     background-color: none;
 }
 
-.navbar_upper .city_picker .form select{
+.navbar_upper .city_picker .form select {
     background-color: transparent;
     font-size: 18px;
     color: rgb(39, 39, 39);
@@ -45,11 +46,11 @@
     -moz-appearance: none;
 }
 
-.navbar_upper .city_picker .form select:focus{
+.navbar_upper .city_picker .form select:focus {
     outline: none;
 }
 
-.navbar_upper .search_box{
+.navbar_upper .search_box {
     width: 40%;
     height: 42px;
     margin: 5px 35px 5px 10px;
@@ -58,7 +59,7 @@
     display: flex;
 }
 
-.navbar_upper .search_box input{
+.navbar_upper .search_box input {
     width: 90%;
     height: 90%;
     padding: 2px;
@@ -67,12 +68,12 @@
     margin-left: 5px;
 }
 
-.navbar_upper .search_box input:focus{
+.navbar_upper .search_box input:focus {
     outline: none;
 }
 
 
-.navbar_upper .search_box svg{
+.navbar_upper .search_box svg {
     color: white;
     width: 10%;
     height: 100%;
@@ -80,7 +81,7 @@
     text-align: center;
 }
 
-.navbar_upper .buttons_notAuthenticated{
+.navbar_upper .buttons_notAuthenticated {
     display: flex;
     align-items: center;
 }
@@ -92,118 +93,128 @@
     margin-right: 15px;
 }
 
-.navbar_upper .buttons_notAuthenticated .sell_button img{
+.navbar_upper .buttons_notAuthenticated .sell_button img {
     width: 98px;
     height: 50px;
 }
 
-.navbar_upper .authenticated{
+.navbar_upper .authenticated {
     display: flex;
     align-items: center;
 }
 
-.navbar_upper .authenticated .user{
+.navbar_upper .authenticated .user {
     display: flex;
     align-items: center;
 }
 
-.navbar_upper .authenticated .user img{
+.navbar_upper .authenticated .user img {
     width: 50px;
     height: 50px;
     margin: 0px 10px 0px 0px;
     border-radius: 50%;
 }
 
-.navbar_upper .authenticated .user h4{
+.navbar_upper .authenticated .user h4 {
     margin: 0px auto;
     font-size: 17px;
     font-weight: 500;
 }
 
-.navbar_upper .authenticated .sellPage a img{
+.navbar_upper .authenticated .sellPage a img {
     width: 100px;
     height: 55px;
     margin: 0px 10px;
-    
+
 }
 
 /* BOTTOM NAV */
 
 
-.bottom-nav{
+.bottom-nav {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    flex-wrap: wrap-reverse;
     max-width: 100%;
     height: 70px;
     background-color: #fcfcfc;
-    padding-left: 10%;
+    margin-top: 5rem !important;
+    /* padding-left: 10%; */
     margin-top: 70px;
     /* z-index: - 1; */
     /* border-bottom: 1px solid lightgray; */
-  
+
 }
 
-#dropdown-basic{
-background: none;
-color: black;
-border: none;
-font-size: 17px;
-font-weight: 500;
-margin-left: 15%;
+#dropdown-basic {
+    background: none;
+    color: black;
+    border: none;
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 15%;
 }
 
-#dropdown-basic:focus{
-box-shadow: none;
-outline: none;
+#dropdown-basic:focus {
+    box-shadow: none;
+    outline: none;
 }
 
-.dropdown{
-width: 200px;
-z-index: 0;
-margin-left: 5%;
+.dropdown {
+    width: 200px;
+    z-index: 0;
+    margin-left: 5%;
 }
 
-.dropdown-menu{
+.dropdown-menu {
+    /* display: flex !important;
+    flex-wrap: wrap !important;
     display: flex !important;
     justify-content: space-around !important;
     flex-wrap: wrap !important;
-    /* align-items: center !important; */
+    align-items: center !important;
     width: 60%;
     height: 500px;
     background-color: #fafafa;
-    padding: 20px 0px;
+    padding: 20px 0px; */
+    display: grid !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    left: -80px !important;
+    padding: 1rem !important;
+    top: 16px !important;
 }
 
-.dropdown-menu .dropdown-item-cont{
-width: 30%;
+
+.dropdown-menu .dropdown-item-cont {
+    width: 30%;
 }
 
-.dropdown-menu .dropdown-item-cont ul{
-list-style-type: none;
+.dropdown-menu .dropdown-item-cont ul {
+    list-style-type: none;
 }
 
-.dropdown-menu .dropdown-item-cont ul li{
-font-size: 14px;
-margin-right: 1%;
-color: #002f34;
-text-decoration: underline !important;
+.dropdown-menu .dropdown-item-cont ul li {
+    font-size: 14px;
+    margin-right: 1%;
+    color: #002f34;
+    text-decoration: underline !important;
 }
 
-.dropdown-item{
-font-size: 16px;
-font-weight: bold !important;
-text-decoration: none !important;
-color: #002f34;
+.dropdown-item {
+    font-size: 16px;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    color: #002f34;
 }
 
-.popular-categories{
+.popular-categories {
     width: 600px;
     margin-top: 0.35%;
     text-decoration: none !important;
 }
 
-.popular-categories ul{
+.popular-categories ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -214,11 +225,70 @@ color: #002f34;
     text-decoration: none;
 }
 
-.popular-categories ul a{
+.popular-categories ul a {
     text-decoration: none;
 }
 
-.popular-categories ul li{
+.popular-categories ul li {
     color: #002f34;
     text-decoration: none;
+}
+
+@media(max-width: 1100px) {
+    .dropdown-menu {
+        left: -5% !important;
+    }
+}
+
+@media(max-width: 1000px) {
+    .dropdown-menu {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+@media(max-width: 860px) {
+    .bottom-nav {
+        margin-top: 7rem !important;
+    }
+
+    .dropdown-menu {
+        grid-template-columns: repeat(3, 1fr) !important;
+        left: -60px !important;
+    }
+}
+
+@media(max-width:768px) {
+    .navbar_upper .city_picker {
+        display: none;
+    }
+}
+
+@media(max-width:720px) {
+    .dropdown-menu {
+        left: 0 !important;
+    }
+}
+
+@media(max-width:650px) {
+    .dropdown-menu {
+        grid-template-columns: repeat(2, 1fr) !important;
+        left: -10% !important;
+    }
+}
+
+@media(max-width: 500px) {
+    .navbar_upper .search_box {
+        display: none;
+    }
+
+    .dropdown-menu {
+        left: -50px !important;
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+}
+
+@media(max-width: 400px) {
+    .dropdown-menu {
+        left: -25px !important;
+    }
 }

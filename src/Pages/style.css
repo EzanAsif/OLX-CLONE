@@ -1,75 +1,75 @@
-.lastSection{
+.lastSection {
     background-color: rgb(245, 245, 245);
 }
 
 
 /* INDIVIDUAL AD */
 
-.individual_ad{
+.individual_ad {
     display: flex;
     justify-content: space-around;
     width: 70%;
     margin: 50px auto 0px auto;
 }
 
-.individual_ad .left{
+.individual_ad .left {
     width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 
-.individual_ad .left .img{
+.individual_ad .left .img {
     width: 100%;
     height: 400px;
     border: 1.5px solid #ccd5d6;
     border-radius: 5px;
 }
 
-.individual_ad .left .img img{
+.individual_ad .left .img img {
     width: 100%;
     height: 100%;
 }
 
-.individual_ad .left .description{
+.individual_ad .left .description {
     border: 1.5px solid #ccd5d6;
     margin: 20px 0;
     padding: 20px 30px;
     border-radius: 5px;
 }
 
-.individual_ad .right{
+.individual_ad .right {
     width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-.individual_ad .right .titleAmount{
+.individual_ad .right .titleAmount {
     padding: 15px 30px;
     border: 1.5px solid #ccd5d6;
     border-radius: 5px;
 }
 
-.individual_ad .right .titleAmount .amount h1{
+.individual_ad .right .titleAmount .amount h1 {
     margin-bottom: 0px !important;
 }
 
-.individual_ad .right .titleAmount .title h3{
+.individual_ad .right .titleAmount .title h3 {
     margin-top: 10px;
     font-weight: 300;
 }
 
-.individual_ad .right .titleAmount .location{
+.individual_ad .right .titleAmount .location {
     font-size: 14px;
     color: #4d4d4d;
 }
 
-.individual_ad .right .titleAmount .location span{
+.individual_ad .right .titleAmount .location span {
     float: right;
 }
 
-.individual_ad .right .sellerDetails{
+.individual_ad .right .sellerDetails {
     display: flex;
     flex-direction: column;
     padding: 15px 20px;
@@ -78,35 +78,35 @@
     margin: 10px 0px;
 }
 
-.individual_ad .right .sellerDetails .heading{
+.individual_ad .right .sellerDetails .heading {
     margin-top: 0px;
     font-weight: 400;
     color: black;
 }
 
-.individual_ad .right .sellerDetails .detailsContainer{
+.individual_ad .right .sellerDetails .detailsContainer {
     display: flex;
     align-items: center;
 }
 
-.individual_ad .right .sellerDetails .detailsContainer .profile{
+.individual_ad .right .sellerDetails .detailsContainer .profile {
     width: 80px;
     height: 80px;
 }
 
-.individual_ad .right .sellerDetails .detailsContainer .profile img{
+.individual_ad .right .sellerDetails .detailsContainer .profile img {
     width: 100%;
     height: 100%;
 }
 
-.individual_ad .right .sellerDetails .detailsContainer .details{
+.individual_ad .right .sellerDetails .detailsContainer .details {
     margin-left: 15px;
     font-weight: 500;
     letter-spacing: -0.85px;
     font-size: 25px;
 }
 
-.individual_ad .right .sellerDetails .button{
+.individual_ad .right .sellerDetails .button {
     margin: 20px 0px;
     width: 100%;
     height: 45px;
@@ -117,19 +117,18 @@
     transition: 0.5s ease;
 }
 
-.individual_ad .right .sellerDetails .button:hover
-{
+.individual_ad .right .sellerDetails .button:hover {
     background-color: white;
     border: 2px solid #002f34;
     transition: 0.5s ease;
 }
 
-.individual_ad .right .sellerDetails .button:hover a{
+.individual_ad .right .sellerDetails .button:hover a {
     color: #002f34;
     transition: 0.5s ease;
 }
 
-.individual_ad .right .sellerDetails .button a{
+.individual_ad .right .sellerDetails .button a {
     width: 100%;
     font-size: 20px;
     color: white;
@@ -138,7 +137,7 @@
     text-align: center;
 }
 
-.BackToTop{
+.BackToTop {
     left: 50%;
     transform: translateX(-50%);
     background-color: #002f34;
@@ -151,19 +150,22 @@
 
 /* CATEGORY PAGE */
 
-.wrapper{
+.wrapper {
+    max-width: 1170px;
+    margin: auto;
+    padding: 2rem;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.wrapper .FilterSection{
-    width: 20%;
+.wrapper .FilterSection {
+    min-width: 220px;
     /* border: 1.5px solid #ccd5d6;
     border-radius: 5px; */
 }
 
-.wrapper .FilterSection .categories{
+.wrapper .FilterSection .categories {
     width: 100%;
     height: max-content;
     border: 1.5px solid #ccd5d6;
@@ -174,45 +176,47 @@
     padding: 20px 0px;
 }
 
-.wrapper .FilterSection .categories h2{
+.wrapper .FilterSection .categories h2 {
     margin-bottom: 0px;
 }
 
-.wrapper .FilterSection .categories ul{
+.wrapper .FilterSection .categories ul {
     padding: 0;
     list-style-type: none;
     margin-top: 0;
 }
 
-.wrapper .FilterSection .categories ul li{
+.wrapper .FilterSection .categories ul li {
     color: #002f34;
     display: flex;
     align-items: center;
 }
 
-.wrapper .FilterSection .categories ul li .c3rwq{
+.wrapper .FilterSection .categories ul li .c3rwq {
     width: 15px;
     height: 2.5px;
     background-color: #002f34;
     margin-top: 12px;
 }
 
-.wrapper .FilterSection .categories ul li h4{
+.wrapper .FilterSection .categories ul li h4 {
     margin: 20px 0px 10px 5px;
 }
 
-.wrapper .FilterSection .categories ul li ul{
+.wrapper .FilterSection .categories ul li ul {
     margin-left: 10px;
 }
 
-.wrapper .categoryCards{
+.wrapper .categoryCards {
     width: 70%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    border-top: 2px solid #ccd5d6;
-    margin-top: 75px;
-    padding: 20px 10px;
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap; */
+    /* border-top: 2px solid #ccd5d6; */
+    /* margin-top: 75px; */
+    /* padding: 20px 10px; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 
@@ -220,69 +224,72 @@
 
 
 .IndivRecomCard {
-    width: 30%;
+    flex-basis: 280px;
+    flex-shrink: 1;
+    min-width: 200px;
     display: flex;
     flex-direction: column;
     height: 400px;
     justify-content: flex-start;
     border: 1.5px solid #ccd5d6;
     border-radius: 5px;
-    margin: 10px 0px;
+    margin: 10px;
     text-decoration: none;
     color: black;
-  }
-  
-  .IndivRecomCard .thumbnail {
+
+}
+
+.IndivRecomCard .thumbnail {
     width: 100%;
     height: 220px;
     margin: 10px 0px;
     display: flex;
     justify-content: center;
-  }
-  
-  .IndivRecomCard .thumbnail img {
+}
+
+.IndivRecomCard .thumbnail img {
     height: 100%;
     width: 70%;
-  }
-  
-  .IndivRecomCard .title{
-      font-weight: 700;
-      margin: 5px 0px 10px 10px;
-      text-align: center;
-      font-size: 18px;
-  }
-  
-  .IndivRecomCard .description{
-      margin: 5px 0px 10px 10px;
-      font-size: 15px;
-      font-weight: 300;
-  }
-  
-  .IndivRecomCard .price{
-      margin: 5px 0px 10px 10px;
-      font-size: 17px;
-      font-weight: 500;
-  }
+}
 
-  .IndivRecomCard .price h3{
-      margin: 0 !important;
-  }
-  
-  .IndivRecomCard .cardFooter{
-      margin: 5px 0px 10px 10px;
-      font-size: 13.5px;
-      font-weight: 300;
-  }
-  
-  .IndivRecomCard .cardFooter span{
-      float: right;
-      margin-right: 10px;
-  }
+.IndivRecomCard .title {
+    font-weight: 700;
+    margin: 5px 0px 10px 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.IndivRecomCard .description {
+    margin: 5px 0px 10px 10px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.IndivRecomCard .price {
+    margin: 5px 0px 10px 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.IndivRecomCard .price h3 {
+    margin: 0 !important;
+}
+
+.IndivRecomCard .cardFooter {
+    margin: 5px 0px 10px 10px;
+    font-size: 13.5px;
+    font-weight: 300;
+}
+
+.IndivRecomCard .cardFooter span {
+    float: right;
+    margin-right: 10px;
+}
 
 
-  /* AD POSTING */
+/* AD POSTING */
 
-  .adForm{
+.adForm {
     width: 60%;
     margin: 100px auto;
     border: 1.5px solid lightgray;
@@ -290,43 +297,43 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+}
 
-  .adForm h3{
+.adForm h3 {
     text-align: center;
     text-transform: uppercase;
     font-size: 25px;
     font-weight: 700;
     margin-bottom: 0;
-  }
+}
 
-  .adForm form{
+.adForm form {
     display: flex;
     flex-direction: column;
     width: 80%;
     margin: 40px 0px 0px 0px;
     align-items: center;
-  }
+}
 
-  .adForm form label,
-  .adForm form input{
-      margin: 5px 0px;
-      width: 100%;
-  }
+.adForm form label,
+.adForm form input {
+    margin: 5px 0px;
+    width: 100%;
+}
 
-  .adForm form input:focus{
-      outline: none;
-      box-shadow: none;
-  }
+.adForm form input:focus {
+    outline: none;
+    box-shadow: none;
+}
 
-  .adForm form button{
-      width: 200px;
-      height: 40px;
-      margin: 20px 0px;
-      color: white;
-      background-color: #002f34;
-      border: none;
-      text-transform: uppercase;
-      font-size: 18px;
-      font-weight: 600;
-  }
+.adForm form button {
+    width: 200px;
+    height: 40px;
+    margin: 20px 0px;
+    color: white;
+    background-color: #002f34;
+    border: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+}
